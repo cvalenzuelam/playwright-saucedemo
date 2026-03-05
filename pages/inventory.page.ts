@@ -29,4 +29,8 @@ export class InventoryPage {
     const removeButton = item.locator('button[id^="remove"]');
     await removeButton.click();
   }
+
+  async goToCart() {
+    await this.cartBadge.click();
+  }
 }
