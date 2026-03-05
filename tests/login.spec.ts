@@ -2,6 +2,10 @@ import { test, expect } from '@playwright/test';
 import { LoginPage } from '../pages/login.page';
 import * as users from '../data/users.json';
 
+/**
+ * Suite de pruebas para el módulo de Login de SauceDemo.
+ * Valida flujos de autenticación exitosos y fallidos.
+ */
 test.describe('SauceDemo Login Tests', () => {
   let loginPage: LoginPage;
 
