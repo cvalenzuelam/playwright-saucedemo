@@ -1,0 +1,29 @@
+{
+  "name": "playwright-saucedemo",
+  "version": "1.0.0",
+  "description": "Iniciando desde cero absoluto.",
+  "main": "index.js",
+  "dependencies": {
+    "husky": "^9.1.7",
+    "playwright": "^1.58.2",
+    "playwright-core": "^1.58.2",
+    "undici-types": "^7.18.2"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "@types/node": "^25.3.4"
+  },
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cvalenzuelam/playwright-saucedemo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/cvalenzuelam/playwright-saucedemo/issues"
+  },
+  "homepage": "https://github.com/cvalenzuelam/playwright-saucedemo#readme"
+}
