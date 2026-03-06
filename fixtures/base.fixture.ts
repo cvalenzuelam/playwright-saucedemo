@@ -1,11 +1,14 @@
 import { test as base } from '@playwright/test';
 import { LoginPage } from '../pages/login.page';
-import { InventoryPage } from '../pages/inventory.page'; // Importamos la nueva página
+import { InventoryPage } from '../pages/inventory.page';
+import { CartPage } from '../pages/cart.page';
+import { CheckoutPage } from '../pages/checkout.page';
 
-// Añadimos la nueva página al tipo de las fixtures
 type MyFixtures = {
   loginPage: LoginPage;
   inventoryPage: InventoryPage;
+  cartPage: CartPage;
+  checkoutPage: CheckoutPage;
 };
 
 export const test = base.extend<MyFixtures>({
@@ -14,11 +17,17 @@ export const test = base.extend<MyFixtures>({
     await lp.navigate();
     await use(lp);
   },
-  
-  // Añadimos cómo se fabrica el inventoryPage
   inventoryPage: async ({ page }, use) => {
     const ip = new InventoryPage(page);
     await use(ip);
+  },
+  cartPage: async ({ page }, use) => {
+    const cp = new CartPage(page);
+    await use(cp);
+  },
+  checkoutPage: async ({ page }, use) => {
+    const chp = new CheckoutPage(page);
+    await use(chp);
   },
 });
 

@@ -28,4 +28,8 @@ export class InventoryPage extends BasePage {
     }
     return '0';
   }
+
+  async goToCart() {
+    await this.cartBadge.click();
+  }
 }
