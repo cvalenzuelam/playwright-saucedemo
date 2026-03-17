@@ -10,6 +10,15 @@ test.describe('Login unhappy paths', () => {
     await loginPage.navigateTo('/');
   });
 
+  test('should login successfully with valid credentials', async ({ loginPage }) => {
+    // Attempt to log in with valid credentials manually
+    await loginPage.login('standard_user', 'secret_sauce');
+    
+    // Validate we reached the inventory page
+    await expect(loginPage.page).toHaveURL(/.*inventory\.html/);
+    await expect(loginPage.page.locator('.title')).toHaveText('Products');
+  });
+
   test('should show error for locked out user', async ({ loginPage }) => {
     // Attempt to log in with locked out user credentials
     await loginPage.login('locked_out_user', 'secret_sauce');
