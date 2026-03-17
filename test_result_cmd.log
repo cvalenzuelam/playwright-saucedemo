@@ -1,0 +1,23 @@
+[dotenv@17.3.1] injecting env (3) from .env -- tip: ⚡️ secrets for agents: https://dotenvx.com/as2
+Error: Cannot find module '../fixtures/pomFixtures'
+Require stack:
+- C:\Users\Chris\Documents\Automation\playwright-saucedemo\tests\setup\auth.setup.ts
+- C:\Users\Chris\Documents\Automation\playwright-saucedemo\node_modules\playwright\lib\transform\transform.js
+- C:\Users\Chris\Documents\Automation\playwright-saucedemo\node_modules\playwright\lib\common\configLoader.js
+- C:\Users\Chris\Documents\Automation\playwright-saucedemo\node_modules\playwright\lib\program.js
+- C:\Users\Chris\Documents\Automation\playwright-saucedemo\node_modules\@playwright\test\cli.js
+
+   at setup\auth.setup.ts:1
+
+> 1 | import { test as setup } from '../fixtures/pomFixtures';
+    | ^
+  2 | import * as path from 'path';
+  3 |
+  4 | const authFile = path.join(__dirname, '../../playwright/.auth/user.json');
+    at Object.<anonymous> (C:\Users\Chris\Documents\Automation\playwright-saucedemo\tests\setup\auth.setup.ts:1:1)
+
+[1A[2K
+To open last HTML report run:
+[36m[39m
+[36m  npx playwright show-report[39m
+[36m[39m
